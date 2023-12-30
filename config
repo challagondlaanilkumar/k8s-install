@@ -1,0 +1,33 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJTVBNTk1Tb0NidEF3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TXpFeU16QXhOekkwTXpKYUZ3MHpNekV5TWpjeE56STVNekphTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUURuRUFKSWJ5aGdMZWdIVGtKQloxa0Y3eEJOVnYxcWFCL3dBVkorNnNLNVpXZTZESS9BczRQQ29KOGsKZEhDYnhYR2ZmN3FsVlFiK0Z1M09ZWFFQYmhZcDllSkVGaytBYjVhQ3o5aWM4T3p3NXVYeWRFNjZHVmJOT0RGVQp5M1VlQjVGSm1UNy9NWUVKL0ZVbkx0VHpEcWM3eEZCT2pMN2pwR09wWm53VlYzOTRaQnl0YXd5MjA0MG5tQXpXClI3LzdkVDFnSU1zY2tCaWxXZXdKRjdLOG8zdHEySXlPenhiNlY4bUNRQm4xS1FLNEdSWmlPbm50UldlMWpMRm8KY3k3djBjMk9yVmJXR2hCSWtzb1IzMk1sM3BCajl0Ump4QzdtTVFic21LUFAvVURQQjBiL3o1TndtcWpRalloNgowaDVTTzF5WXVJeTdYOVpvaysvdWFCcTk4ZGhuQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJRQVJSc1o4Q1hjekZqVDNDTitEd0FOL0k0UHFUQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQ1h3dnFGZXgxMApLZ1h5bUFXcnZUQ3pVd2FZcFdNYlZueTBzM2JXdmN5NVZXekxzL0hNM0ZHamNJM3VGalh4MGNQaUVrZFR5Vlp3Cnd6Q2tCWmdrQ3dPclo2dW1zNFI1aytHUlFBT2dNZ2lOYmtyenllUlBJY0FXTDhjVkY0QlY2R3VOWGZJbFBvT1oKS1hSb1BkSnRsaUQ4Q2xFRlNDSUVXeklrdmN1WGtzak1CcEE2cHgrSGF6T0hlL1VhSWRzVzV1Rnh1Q0RPREhPRgpIR1hmQmdaWGdoTkpEQ0U3RE41T3VLVGtqekVhemU5TmtCQlFLRzFkSmNYbmJML2lYelNKTEZhSk5ZWEZsT1pXCk5jUUgwbEUvR0RNN3BDT3I4ZmF6aW90L1ROVlZTOWJxOFhLZS9HQjhjRmpFR3FsSGdBc2IyT3RNbERrRzVkSG8KS1pqSWV1NkRaTkx3Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    server: https://C6F712580E7E6AD451DE3171F7B8145F.gr7.ap-south-1.eks.amazonaws.com
+  name: spot-cluster.ap-south-1.eksctl.io
+contexts:
+- context:
+    cluster: spot-cluster.ap-south-1.eksctl.io
+    user: aniltf@spot-cluster.ap-south-1.eksctl.io
+  name: aniltf@spot-cluster.ap-south-1.eksctl.io
+current-context: aniltf@spot-cluster.ap-south-1.eksctl.io
+kind: Config
+preferences: {}
+users:
+- name: aniltf@spot-cluster.ap-south-1.eksctl.io
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - eks
+      - get-token
+      - --output
+      - json
+      - --cluster-name
+      - spot-cluster
+      - --region
+      - ap-south-1
+      command: aws
+      env:
+      - name: AWS_STS_REGIONAL_ENDPOINTS
+        value: regional
+      provideClusterInfo: false

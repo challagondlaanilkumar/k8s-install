@@ -1,0 +1,12 @@
+# spot-cluster.yaml
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+  name: spot-cluster
+  region: ap-south-1
+  
+managedNodeGroups:
+- name: spot
+  spot: true
+  ssh:
+    publicKeyName: docker
