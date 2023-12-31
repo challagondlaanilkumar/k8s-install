@@ -16,6 +16,8 @@ unzip awscliv2.zip
 echo "========================================================================"
 echo "aws --version"
 aws --version
+
+
 echo " "
 echo " "
 echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
@@ -42,6 +44,8 @@ echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
 echo "========================================================================"
 echo "kubectl version --client"
 kubectl version --client
+
+
 
 echo " "
 echo " "
