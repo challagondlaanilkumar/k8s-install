@@ -2,7 +2,7 @@
 apt update
 
 echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-echo "++                      AWSCTL INSTALLATION"                         ++"
+echo "++                      AWSCTL INSTALLATION                          ++"
 echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo " "
 echo "apt remove awscli"
@@ -21,7 +21,7 @@ aws --version
 echo " "
 echo " "
 echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-echo "++                      KUBECTL INSTALLATION"                        ++"
+echo "++                      KUBECTL INSTALLATION                         ++"
 echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo " "
 echo "kubectl version --client"
@@ -50,7 +50,7 @@ kubectl version --client
 echo " "
 echo " "
 echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-echo "++                      EKSCTL INSTALLATION"                         ++"
+echo "++                      EKSCTL INSTALLATION                          ++"
 echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo " "
 
